@@ -2,12 +2,14 @@ package com.example.DesafioPicPay.domain.user;
 
 import jakarta.persistence.*;
 
+
 import java.math.BigDecimal;
 import java.util.Objects;
 
 
 @Entity(name = "tb_user")
 @Table
+
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
