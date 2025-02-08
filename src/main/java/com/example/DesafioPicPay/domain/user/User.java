@@ -1,5 +1,6 @@
 package com.example.DesafioPicPay.domain.user;
 
+import com.example.DesafioPicPay.dtos.UserDTO;
 import jakarta.persistence.*;
 
 
@@ -31,6 +32,15 @@ public class User {
     private String password;
 
     private BigDecimal balance;
+
+    public User(UserDTO data){
+        this.firstName = data.firstName();
+        this.lastName = data.lastName();
+        this.balance = data.balance();
+        this.userType = data.usertype();
+        this.password = data.password();
+        this.email = data.email();
+    }
 
     public User() {}
 
